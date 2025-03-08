@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校区 - 汉唐古筝</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/campus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="#" class="nav-item" data-i18n="nav.news">新闻</a>
+                <a href="campus.html" class="nav-item" data-i18n="nav.campus">校区</a>
+                <a href="#" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-item active" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="teachers.html" data-i18n="nav.teachers">师资力量</a>
+                        <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>校区分布</h1>
+            <p>遍布全国的优质教学环境</p>
+        </div>
+    </section>
+
+    <!-- 校区搜索 -->
+    <section class="campus-search">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" placeholder="输入您所在的城市或地区">
+                <button class="btn"><i class="fas fa-search"></i> 搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要校区 -->
+    <section class="main-campuses">
+        <div class="container">
+            <h2>主要校区</h2>
+            <div class="campus-grid">
+                <div class="campus-card">
+                    <div class="campus-image">
+                        <img src="https://via.placeholder.com/600x400" alt="总部校区">
+                        <div class="campus-tag">总部</div>
+                    </div>
+                    <div class="campus-info">
+                        <h3>市中心总部校区</h3>
+                        <p class="address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</p>
+                        <p class="phone"><i class="fas fa-phone"></i> 010-88888888</p>
+                        <div class="facilities">
+                            <h4>设施特色：</h4>
+                            <ul>
+                                <li><i class="fas fa-music"></i> 专业录音棚</li>
+                                <li><i class="fas fa-door-open"></i> 独立琴房</li>
+                                <li><i class="fas fa-theater-masks"></i> 小型演出厅</li>
+                                <li><i class="fas fa-parking"></i> 地下停车场</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn">预约参观</a>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <div class="campus-image">
+                        <img src="https://via.placeholder.com/600x400" alt="海淀校区">
+                        <div class="campus-tag">新校区</div>
+                    </div>
+                    <div class="campus-info">
+                        <h3>海淀校区</h3>
+                        <p class="address"><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街123号</p>
+                        <p class="phone"><i class="fas fa-phone"></i> 010-66666666</p>
+                        <div class="facilities">
+                            <h4>设施特色：</h4>
+                            <ul>
+                                <li><i class="fas fa-music"></i> 现代化琴房</li>
+                                <li><i class="fas fa-wifi"></i> 免费WiFi</li>
+                                <li><i class="fas fa-coffee"></i> 休息区</li>
+                                <li><i class="fas fa-parking"></i> 便利停车</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn">预约参观</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校区特色 -->
+    <section class="campus-features">
+        <div class="container">
+            <h2>校区特色</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-building"></i>
+                    <h3>优质环境</h3>
+                    <p>精心设计的教学空间，为学习创造最佳氛围</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bus"></i>
+                    <h3>交通便利</h3>
+                    <p>地铁沿线，公交直达，便捷抵达</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>设施完善</h3>
+                    <p>配备专业乐器和现代化教学设备</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>安全保障</h3>
+                    <p>24小时安保，确保学习环境安全</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校区分布 -->
+    <section class="campus-distribution">
+        <div class="container">
+            <h2>全国校区分布</h2>
+            <div class="distribution-content">
+                <div class="region">
+                    <h3>华北地区</h3>
+                    <ul>
+                        <li>北京（6家）</li>
+                        <li>天津（3家）</li>
+                        <li>石家庄（2家）</li>
+                    </ul>
+                </div>
+                <div class="region">
+                    <h3>华东地区</h3>
+                    <ul>
+                        <li>上海（8家）</li>
+                        <li>南京（4家）</li>
+                        <li>杭州（5家）</li>
+                    </ul>
+                </div>
+                <div class="region">
+                    <h3>华南地区</h3>
+                    <ul>
+                        <li>广州（7家）</li>
+                        <li>深圳（6家）</li>
+                        <li>厦门（3家）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约参观 -->
+    <section class="visit-booking">
+        <div class="container">
+            <h2>预约参观</h2>
+            <div class="booking-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campus">意向校区</label>
+                        <select id="campus" required>
+                            <option value="">请选择校区</option>
+                            <option value="center">市中心总部校区</option>
+                            <option value="haidian">海淀校区</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">参观日期</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <button type="submit" class="btn">提交预约</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">课程介绍</a></li>
+                    <li><a href="campus.html">校区地址</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>订阅新闻</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入您的邮箱">
+                    <button type="submit" class="btn">订阅</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 汉唐古筝. 保留所有权利.</p>
+            <p><a href="#">使用条款</a> | <a href="#">隐私政策</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

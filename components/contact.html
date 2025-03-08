@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 汉唐古筝</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="#" class="nav-item" data-i18n="nav.news">新闻</a>
+                <a href="campus.html" class="nav-item" data-i18n="nav.campus">校区</a>
+                <a href="#" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-item active" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="teachers.html" data-i18n="nav.teachers">师资力量</a>
+                        <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>联系我们</h1>
+            <p>随时为您提供帮助和支持</p>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>电话咨询</h3>
+                    <p>周一至周日 9:00-21:00</p>
+                    <p class="highlight">400-888-8888</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>电子邮件</h3>
+                    <p>24小时内回复</p>
+                    <p class="highlight">info@newmusic.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-weixin"></i>
+                    <h3>微信咨询</h3>
+                    <p>扫描二维码添加</p>
+                    <img src="https://via.placeholder.com/150" alt="微信二维码" class="qr-code">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线咨询 -->
+    <section class="contact-form">
+        <div class="container">
+            <h2>在线咨询</h2>
+            <form class="inquiry-form">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">电话</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">咨询主题</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">请选择咨询主题</option>
+                        <option value="course">课程咨询</option>
+                        <option value="price">价格咨询</option>
+                        <option value="trial">试课预约</option>
+                        <option value="other">其他问题</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">咨询内容</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">提交咨询</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq">
+        <div class="container">
+            <h2>常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>如何预约试课？</h3>
+                    <p>您可以通过网站预约、电话咨询或到校区现场预约。我们的工作人员会尽快与您联系安排。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何选择合适的课程？</h3>
+                    <p>建议您先预约免费试课，我们的专业老师会根据您的兴趣和基础为您推荐合适的课程。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>可以更换授课教师吗？</h3>
+                    <p>可以，如果您对现任教师的教学方式不太适应，可以申请更换。我们会认真处理您的需求。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何申请退费？</h3>
+                    <p>请携带相关凭证到校区客服中心办理，我们会按照规定为您处理退费事宜。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校区地图 -->
+    <section class="campus-map">
+        <div class="container">
+            <h2>地图</h2>
+            <div class="map-container">
+                <!-- 这里可以嵌入地图，例如百度地图或高德地图 -->
+                <img src="../images/dz.png" alt="地图" class="map-placeholder">
+            </div>
+            <div class="map-info">
+                <h3>地址</h3>
+                <div class="transport-info">
+                    <div class="transport-item">
+                        <i class="fas fa-car"></i>
+                        <p>Block 229B, Sumang Lane, #12-308, Singapore 822229</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">课程介绍</a></li>
+                    <li><a href="campus.html">校区地址</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>订阅新闻</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入您的邮箱">
+                    <button type="submit" class="btn">订阅</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 汉唐古筝. 保留所有权利.</p>
+            <p><a href="#">使用条款</a> | <a href="#">隐私政策</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

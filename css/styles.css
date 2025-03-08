@@ -1,0 +1,683 @@
+/* 全局样式 */
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #DAA520;
+    --text-color: #333;
+    --background-color: #fff;
+    --section-padding: 80px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.logo a:hover {
+    animation: logoShake 0.5s ease-in-out;
+}
+
+@keyframes logoShake {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+}
+
+.book-trial {
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.book-trial:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* 语言切换按钮 */
+.lang-switch {
+    background: var(--text-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.lang-switch:hover {
+    background: var(--primary-color);
+}
+
+/* 下拉菜单 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--background-color);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: #f5f5f5;
+    color: var(--primary-color);
+}
+
+/* 英雄区域 */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 特色区域 */
+.why-choose-us {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 课程区域 */
+.music-lessons {
+    padding: var(--section-padding);
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.lesson {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.lesson:hover {
+    transform: translateY(-10px);
+}
+
+.lesson i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 开始学习区域 */
+.getting-started {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+
+/* 价格区域 */
+.pricing {
+    padding: var(--section-padding);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.price-package {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.price-package.featured {
+    transform: scale(1.05);
+    border: 2px solid var(--primary-color);
+}
+
+.price-package:hover {
+    transform: translateY(-10px);
+}
+
+.price {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.price-package ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.price-package li {
+    margin: 10px 0;
+}
+
+/* 博客区域 */
+.blog {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post h3 {
+    padding: 20px 20px 10px;
+}
+
+.blog-post p {
+    padding: 0 20px;
+}
+
+.blog-post .date {
+    color: #666;
+    font-size: 14px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 20px;
+}
+
+/* 评价区域 */
+.testimonials {
+    padding: var(--section-padding);
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonials-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    transform: translateY(0);
+    width: calc(33.33% - 20px);
+}
+
+.testimonials-column.scroll-down {
+    animation: scrollDown 30s linear infinite;
+}
+
+.testimonials-column.scroll-up {
+    animation: scrollUp 30s linear infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.testimonial {
+    text-align: center;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.stars {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.author {
+    font-style: italic;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.platform-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.testimonials-column:hover {
+    animation-play-state: paused;
+}
+
+/* 页脚 */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 24px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hamburger {
+    display: none;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--background-color);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .hamburger {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 5px;
+        }
+    
+        .hamburger.active {
+            color: var(--primary-color);
+        }
+    
+        .steps {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .hero h1 {
+            font-size: 36px;
+        }
+    
+        .hero p {
+            font-size: 18px;
+        }
+    
+        .hero-buttons {
+            flex-direction: column;
+        }
+    
+        .price-package.featured {
+            transform: scale(1);
+        }
+    }
+
+.why-choose-us h2,
+.music-lessons h2,
+.getting-started h2,
+.pricing h2,
+.blog h2,
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.why-choose-us h2::after,
+.music-lessons h2::after,
+.getting-started h2::after,
+.pricing h2::after,
+.blog h2::after,
+.testimonials h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ffd700;
+}

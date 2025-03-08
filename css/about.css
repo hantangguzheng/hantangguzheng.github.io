@@ -1,0 +1,446 @@
+/* About页面样式 */
+
+/* 页面标题区域 */
+.page-header {
+    padding: 150px 0 80px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080') center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 24px;
+    opacity: 0.9;
+}
+
+/* 我们的故事区域 */
+.our-story {
+    padding: var(--section-padding);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 业务范围区域 */
+.business-scope {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.scope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.scope-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.scope-item:hover {
+    transform: translateY(-10px);
+}
+
+.scope-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 自主产品区域 */
+.our-products {
+    padding: var(--section-padding);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.product-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-item ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.product-item li {
+    margin: 10px 0;
+}
+
+/* 品牌代理区域 */
+.brand-agency {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.brand-showcase {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.brand-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.brand-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.brand-info h3 {
+    margin-bottom: 15px;
+}
+
+.brand-info p {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.brand-info ul {
+    list-style: none;
+}
+
+.brand-info li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.brand-info li:before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* 师资力量区域 */
+.teacher-strength {
+    padding: var(--section-padding);
+}
+
+.teacher-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.info-card {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 服务承诺区域 */
+.service-commitment {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.commitment-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.commitment-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+}
+
+.commitment-item h3 {
+    margin: 15px 0;
+}
+
+.commitment-item p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.commitment-item .btn {
+    align-self: center;
+    margin-top: auto;
+}
+
+.commitment-item:hover {
+    transform: translateY(-10px);
+}
+
+.commitment-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 价值观区域 */
+.core-values {
+    padding: var(--section-padding);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 发展历程区域 */
+.timeline {
+    padding: var(--section-padding);
+    background: #f9f9f9;
+}
+
+.timeline-items {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    position: relative;
+}
+
+.timeline-items:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.timeline-item .year {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.timeline-item .content {
+    width: 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 团队介绍区域 */
+.team {
+    padding: var(--section-padding);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.team-member .position {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .story-content,
+    .brand-item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-items:before {
+        left: 0;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item .content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .page-header {
+        padding: 120px 0 60px;
+    }
+
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+    }
+}
+/* 通用标题样式 */
+.our-story h2,
+.business-scope h2,
+.our-products h2,
+.brand-agency h2,
+.teacher-strength h2,
+.service-commitment h2,
+.core-values h2,
+.timeline h2,
+.team h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.our-story h2:after,
+.business-scope h2:after,
+.our-products h2:after,
+.brand-agency h2:after,
+.teacher-strength h2:after,
+.service-commitment h2:after,
+.core-values h2:after,
+.timeline h2:after,
+.team h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品长廊 - 汉唐古筝</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/pointer-lock.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="gallery.html" class="nav-item active" data-i18n="nav.gallery">作品长廊</a>
+                <a href="campus.html" class="nav-item" data-i18n="nav.campus">校区</a>
+                <a href="#" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-item" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="teachers.html" data-i18n="nav.teachers">师资力量</a>
+                        <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>作品长廊</h1>
+            <p>探索我们的古筝音乐世界</p>
+        </div>
+    </section>
+
+    <!-- 3D画廊控制说明 -->
+    <div class="gallery-controls">
+        <h3>操作指南</h3>
+        <p><i class="fas fa-keyboard"></i> W/A/S/D 或方向键移动</p>
+        <p><i class="fas fa-mouse-pointer"></i> 鼠标控制视角</p>
+        <p><i class="fas fa-hand-pointer"></i> 点击画面开始体验</p>
+        <div class="background-switch">
+            <button id="dark-bg" class="active">暗色背景</button>
+            <button id="instrument-bg">乐器背景</button>
+        </div>
+    </div>
+
+    <!-- 3D画廊容器 -->
+    <div id="gallery-container"></div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>汉唐古筝致力于传播中国传统音乐文化，提供专业的古筝教育和服务。</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 新加坡市中心</li>
+                    <li><i class="fas fa-phone"></i> +65 1234 5678</li>
+                    <li><i class="fas fa-envelope"></i> info@hantangguzheng.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-wechat"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Singapore汉唐古筝. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/gallery.js"></script>
+</body>
+</html>

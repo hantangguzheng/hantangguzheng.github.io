@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程介绍 - 汉唐古筝</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="#" class="nav-item" data-i18n="nav.news">新闻</a>
+                <a href="campus.html" class="nav-item" data-i18n="nav.campus">校区</a>
+                <a href="#" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-item active" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="teachers.html" data-i18n="nav.teachers">师资力量</a>
+                        <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>音乐课程</h1>
+            <p>探索我们丰富多样的音乐课程</p>
+        </div>
+    </section>
+
+    <!-- 课程分类 -->
+    <section class="course-categories">
+        <div class="container">
+            <h2>课程分类</h2>
+            <div class="categories-grid">
+                <div class="category">
+                    <i class="fas fa-child"></i>
+                    <h3>儿童课程</h3>
+                    <p>4-12岁</p>
+                    <ul>
+                        <li>趣味音乐启蒙</li>
+                        <li>儿童钢琴基础</li>
+                        <li>少儿声乐培养</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>青少年课程</h3>
+                    <p>13-18岁</p>
+                    <ul>
+                        <li>专业器乐培训</li>
+                        <li>音乐理论学习</li>
+                        <li>艺考考级辅导</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <i class="fas fa-user"></i>
+                    <h3>成人课程</h3>
+                    <p>18岁以上</p>
+                    <ul>
+                        <li>兴趣培养</li>
+                        <li>专业进修</li>
+                        <li>音乐鉴赏</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门课程 -->
+    <section class="popular-courses">
+        <div class="container">
+            <h2>热门课程</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/400x300" alt="古筝课程">
+                        <div class="course-tag">热门</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>古筝课程</h3>
+                        <p class="course-description">传统与现代相结合的古筝教学，感受东方音乐之美。</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
+                            <li><i class="fas fa-user-graduate"></i> 师资：专业古筝教师</li>
+                            <li><i class="fas fa-layer-group"></i> 难度：初级到高级</li>
+                        </ul>
+                        <a href="trial.html" class="btn">预约试课</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/400x300" alt="吉他课程">
+                        <div class="course-tag">推荐</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>吉他课程</h3>
+                        <p class="course-description">流行音乐演奏技巧，让你轻松掌握吉他弹唱。</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
+                            <li><i class="fas fa-user-graduate"></i> 师资：专业吉他教师</li>
+                            <li><i class="fas fa-layer-group"></i> 难度：初级到中级</li>
+                        </ul>
+                        <a href="trial.html" class="btn">预约试课</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/400x300" alt="声乐课程">
+                        <div class="course-tag">新课</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>声乐课程</h3>
+                        <p class="course-description">科学发声方法训练，提升演唱技巧与表现力。</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
+                            <li><i class="fas fa-user-graduate"></i> 师资：专业声乐教师</li>
+                            <li><i class="fas fa-layer-group"></i> 难度：初级到高级</li>
+                        </ul>
+                        <a href="trial.html" class="btn">预约试课</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程特色 -->
+    <section class="course-features-section">
+        <div class="container">
+            <h2>课程特色</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>一对一教学</h3>
+                    <p>个性化教学计划，因材施教</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>进度跟踪</h3>
+                    <p>定期评估学习效果，及时调整教学方案</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>考级认证</h3>
+                    <p>专业考级辅导，提供权威认证</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-music"></i>
+                    <h3>演出机会</h3>
+                    <p>定期举办音乐会，展示学习成果</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq">
+        <div class="container">
+            <h2>常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>如何选择适合的课程？</h3>
+                    <p>我们会根据您的年龄、基础和学习目标，为您推荐最适合的课程。您也可以通过免费试课来体验不同的课程。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>课程可以调课吗？</h3>
+                    <p>可以，请提前24小时与我们联系安排调课。每月可调课2次。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>需要自备乐器吗？</h3>
+                    <p>课程期间可以使用学院的乐器，但建议购买自己的乐器以便日常练习。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>可以免费试课吗？</h3>
+                    <p>是的，我们提供一次免费试课机会，让您了解课程内容和教学方式。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">课程介绍</a></li>
+                    <li><a href="campus.html">校区地址</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>订阅新闻</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入您的邮箱">
+                    <button type="submit" class="btn">订阅</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 汉唐古筝. 保留所有权利.</p>
+            <p><a href="#">使用条款</a> | <a href="#">隐私政策</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

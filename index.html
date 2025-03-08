@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新加坡汉唐古筝</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/i18n.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="components/courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="components/gallery.html" class="nav-item" data-i18n="nav.gallery">作品长廊</a>
+                <a href="components/campus.html" class="nav-item" data-i18n="nav.campus">校区</a>
+                <a href="#" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="components/about.html" class="nav-item active" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="components/teachers.html" data-i18n="nav.teachers">师资力量</a>
+                        <a href="components/contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>汉唐古筝，为每个人而设</h1>
+            <p>欢迎来到汉唐古筝，在这里音乐为生活增添意义</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn primary">预约免费试课</a>
+                <a href="#" class="btn secondary">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 为什么选择我们 -->
+    <section class="why-choose-us">
+        <h2>为什么选择汉唐古筝？</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <i class="fas fa-music"></i>
+                <h3>表演机会</h3>
+                <p>定期举办音乐会，让学员展示才华</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>专业教师</h3>
+                <p>经验丰富的教师团队为您量身定制课程</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>手机应用</h3>
+                <p>随时随地查看课程进度和练习记录</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-home"></i>
+                <h3>温馨环境</h3>
+                <p>舒适的学习环境，让您感受家的温暖</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 音乐课程 -->
+    <section class="music-lessons">
+        <h2>我们的服务</h2>
+        <div class="lessons-grid">
+            <div class="lesson">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>品牌古筝交易</h3>
+                <p>提供各种品牌古筝全新、二手交易服务</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+            <div class="lesson">
+                <i class="fas fa-tools"></i>
+                <h3>古筝配件供应</h3>
+                <p>提供古筝所有配件的供应服务</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+            <div class="lesson">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>古筝教育</h3>
+                <p>提供专业的古筝教育课程</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+            <div class="lesson">
+                <i class="fas fa-certificate"></i>
+                <h3>海外古筝考级</h3>
+                <p>提供海外古筝考级服务</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+            <div class="lesson">
+                <i class="fas fa-comments"></i>
+                <h3>民乐咨询</h3>
+                <p>提供民乐相关的咨询服务</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+            <div class="lesson">
+                <i class="fas fa-music"></i>
+                <h3>民乐音乐会</h3>
+                <p>提供民乐音乐会的信息和服务</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开始学习 -->
+    <section class="getting-started">
+        <h2>如何开始学习</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>预约免费试课</h3>
+                <p>选择您感兴趣的课程并预约</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>参加试课</h3>
+                <p>体验专业的一对一教学</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>开始学习</h3>
+                <p>正式开启您的古筝之旅</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格 -->
+    <section class="pricing">
+        <h2>课程价格</h2>
+        <div class="pricing-grid">
+            <div class="price-package">
+                <h3>30分钟课程</h3>
+                <p class="price">¥200/节</p>
+                <ul>
+                    <li>每月4节课</li>
+                    <li>一对一教学</li>
+                    <li>免费使用设备</li>
+                </ul>
+                <a href="#" class="btn">预约试课</a>
+            </div>
+            <div class="price-package featured">
+                <h3>45分钟课程</h3>
+                <p class="price">¥280/节</p>
+                <ul>
+                    <li>每月4节课</li>
+                    <li>一对一教学</li>
+                    <li>免费使用设备</li>
+                    <li>课后练习指导</li>
+                </ul>
+                <a href="#" class="btn">预约试课</a>
+            </div>
+            <div class="price-package">
+                <h3>60分钟课程</h3>
+                <p class="price">¥350/节</p>
+                <ul>
+                    <li>每月4节课</li>
+                    <li>一对一教学</li>
+                    <li>免费使用设备</li>
+                    <li>课后练习指导</li>
+                    <li>定期音乐会表演</li>
+                </ul>
+                <a href="#" class="btn">预约试课</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客 -->
+    <section class="blog">
+        <h2>最新动态</h2>
+        <div class="blog-grid">
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/300x200" alt="博客图片">
+                <h3>如何选择适合的乐器</h3>
+                <p class="date">2024年3月15日</p>
+                <p>为初学者提供选择乐器的专业建议...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/300x200" alt="博客图片">
+                <h3>音乐教育的重要性</h3>
+                <p class="date">2024年3月10日</p>
+                <p>探讨音乐教育对儿童发展的积极影响...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/300x200" alt="博客图片">
+                <h3>练习技巧分享</h3>
+                <p class="date">2024年3月5日</p>
+                <p>提高练习效率的实用方法...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- 评价 -->
+    <section class="testimonials">
+        <h2>学员评价</h2>
+        <div class="testimonials-container">
+            <div class="testimonials-column scroll-down">
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师很专业，课程安排合理，孩子进步很快。"</p>
+                    <p class="author">- 张女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"一对一教学非常适合孩子的学习节奏。"</p>
+                    <p class="author">- 王先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"孩子在这里学习很开心，进步也很明显。"</p>
+                    <p class="author">- 陈女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"教学质量很高，老师们都很负责任。"</p>
+                    <p class="author">- 刘先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程设置很合理，孩子学习很有动力。"</p>
+                    <p class="author">- 杨女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师教学经验丰富，能因材施教。"</p>
+                    <p class="author">- 赵先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"环境很好，设备也很齐全。"</p>
+                    <p class="author">- 孙女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师们都很有耐心，教学效果很好。"</p>
+                    <p class="author">- 周先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程安排很灵活，适合工作日学习。"</p>
+                    <p class="author">- 吴女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"孩子在这里学习很有成就感。"</p>
+                    <p class="author">- 郭先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+            </div>
+            <div class="testimonials-column scroll-up">
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"教学质量很好，老师很专业。"</p>
+                    <p class="author">- 李女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程内容很丰富，孩子学习很投入。"</p>
+                    <p class="author">- 张先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师教学方法很好，孩子进步很快。"</p>
+                    <p class="author">- 王女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"环境很好，老师很耐心。"</p>
+                    <p class="author">- 陈先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程设置很科学，进度安排合理。"</p>
+                    <p class="author">- 刘女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师很专业，教学效果很好。"</p>
+                    <p class="author">- 杨先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"孩子在这里学习很开心。"</p>
+                    <p class="author">- 赵女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"教学质量很高，老师很负责。"</p>
+                    <p class="author">- 孙先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程内容很实用，进步很明显。"</p>
+                    <p class="author">- 周女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师很专业，教学方法很好。"</p>
+                    <p class="author">- 吴先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+            </div>
+            <div class="testimonials-column scroll-down">
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"课程安排很合理，进度把控很好。"</p>
+                    <p class="author">- 郑女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"老师很耐心，教学效果很好。"</p>
+                    <p class="author">- 马先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"环境很好，设备很齐全。"</p>
+                    <p class="author">- 林女士</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"师资力量雄厚，教学质量有保证。"</p>
+                    <p class="author">- 陈先生</p>
+                    <a href="#" class="platform-link">查看更多评价</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">课程介绍</a></li>
+                    <li><a href="#">校区地址</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKUIYjlNco-smZfmOsk_ziA"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>订阅新闻</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入您的邮箱">
+                    <button type="submit" class="btn">订阅</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 汉唐古筝. 保留所有权利.</p>
+            <p><a href="#">使用条款</a> | <a href="#">隐私政策</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
