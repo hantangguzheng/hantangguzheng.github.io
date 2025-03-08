@@ -52,7 +52,7 @@
 
 .background-switch {
     margin-top: 15px;
-    display: flex;
+    display: none; /* 隐藏背景切换按钮 */
     gap: 10px;
 }
 
