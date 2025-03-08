@@ -2,19 +2,39 @@
 
 /* 页面标题 */
 .page-header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080') center/cover;
-    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bg.png') center/cover;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
     margin-top: 80px;
+    position: relative;
 }
 
 .header-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.header-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.header-content p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* 课程分类 */
@@ -23,11 +43,35 @@
     background: #f9f9f9;
 }
 
+.course-categories h2,
+.popular-courses h2,
+.course-features-section h2,
+.faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.course-categories h2::after,
+.popular-courses h2::after,
+.course-features-section h2::after,
+.faq h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin: 60px;
 }
 
 .category {
@@ -70,21 +114,23 @@
 
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin: 60px;
 }
 
 .course-card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .course-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .course-image {
@@ -177,9 +223,9 @@
 
 .faq-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin: 60px;
 }
 
 .faq-item {
@@ -187,6 +233,12 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .faq-item h3 {
@@ -197,11 +249,15 @@
 /* 响应式设计 */
 @media (max-width: 768px) {
     .page-header {
-        height: 200px;
+        height: 300px;
     }
 
     .header-content h1 {
         font-size: 36px;
+    }
+
+    .header-content p {
+        font-size: 16px;
     }
 
     .categories-grid,
@@ -209,10 +265,22 @@
     .features-grid,
     .faq-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .course-card {
         max-width: 400px;
         margin: 0 auto;
+    }
+
+    .category,
+    .feature-item,
+    .faq-item {
+        padding: 20px;
+    }
+
+    .category i,
+    .feature-item i {
+        font-size: 36px;
     }
 }
