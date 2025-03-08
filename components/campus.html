@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <button class="lang-switch" onclick="toggleLanguage()">EN</button>
-                <a href="#" class="nav-item book-trial">预约试课</a>
+                <a href="#" class="nav-item book-trial" data-i18n="nav.trial">预约试课</a>
             </div>
         </div>
     </nav>
@@ -37,8 +37,8 @@
     <!-- 页面标题 -->
     <section class="page-header">
         <div class="header-content">
-            <h1>校区分布</h1>
-            <p>遍布全国的优质教学环境</p>
+            <h1 data-i18n="campus.pageTitle">校区分布</h1>
+            <p data-i18n="campus.pageSubtitle">遍布全国的优质教学环境</p>
         </div>
     </section>
 
@@ -46,8 +46,8 @@
     <section class="campus-search">
         <div class="container">
             <div class="search-box">
-                <input type="text" placeholder="输入您所在的城市或地区">
-                <button class="btn"><i class="fas fa-search"></i> 搜索</button>
+                <input type="text" placeholder="输入您所在的城市或地区" data-i18n-placeholder="campus.searchPlaceholder">
+                <button class="btn"><i class="fas fa-search"></i> <span data-i18n="campus.searchButton">搜索</span></button>
             </div>
         </div>
     </section>
@@ -55,49 +55,49 @@
     <!-- 主要校区 -->
     <section class="main-campuses">
         <div class="container">
-            <h2>主要校区</h2>
+            <h2 data-i18n="campus.mainCampusesTitle">主要校区</h2>
             <div class="campus-grid">
                 <div class="campus-card">
                     <div class="campus-image">
                         <img src="https://via.placeholder.com/600x400" alt="总部校区">
-                        <div class="campus-tag">总部</div>
+                        <div class="campus-tag" data-i18n="campus.headquartersCampus.tag">总部</div>
                     </div>
                     <div class="campus-info">
-                        <h3>市中心总部校区</h3>
-                        <p class="address"><i class="fas fa-map-marker-alt"></i> 北京市朝阳区建国路88号</p>
+                        <h3 data-i18n="campus.headquartersCampus.title">市中心总部校区</h3>
+                        <p class="address"><i class="fas fa-map-marker-alt"></i> <span data-i18n="campus.headquartersCampus.address">北京市朝阳区建国路88号</span></p>
                         <p class="phone"><i class="fas fa-phone"></i> 010-88888888</p>
                         <div class="facilities">
-                            <h4>设施特色：</h4>
+                            <h4 data-i18n="campus.headquartersCampus.facilitiesTitle">设施特色：</h4>
                             <ul>
-                                <li><i class="fas fa-music"></i> 专业录音棚</li>
-                                <li><i class="fas fa-door-open"></i> 独立琴房</li>
-                                <li><i class="fas fa-theater-masks"></i> 小型演出厅</li>
-                                <li><i class="fas fa-parking"></i> 地下停车场</li>
+                                <li><i class="fas fa-music"></i> <span data-i18n="campus.headquartersCampus.facility1">专业录音棚</span></li>
+                                <li><i class="fas fa-door-open"></i> <span data-i18n="campus.headquartersCampus.facility2">独立琴房</span></li>
+                                <li><i class="fas fa-theater-masks"></i> <span data-i18n="campus.headquartersCampus.facility3">小型演出厅</span></li>
+                                <li><i class="fas fa-parking"></i> <span data-i18n="campus.headquartersCampus.facility4">地下停车场</span></li>
                             </ul>
                         </div>
-                        <a href="#" class="btn">预约参观</a>
+                        <a href="#" class="btn" data-i18n="campus.bookTour">预约参观</a>
                     </div>
                 </div>
 
                 <div class="campus-card">
                     <div class="campus-image">
                         <img src="https://via.placeholder.com/600x400" alt="海淀校区">
-                        <div class="campus-tag">新校区</div>
+                        <div class="campus-tag" data-i18n="campus.haidianCampus.tag">新校区</div>
                     </div>
                     <div class="campus-info">
-                        <h3>海淀校区</h3>
-                        <p class="address"><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街123号</p>
+                        <h3 data-i18n="campus.haidianCampus.title">海淀校区</h3>
+                        <p class="address"><i class="fas fa-map-marker-alt"></i> <span data-i18n="campus.haidianCampus.address">北京市海淀区中关村大街123号</span></p>
                         <p class="phone"><i class="fas fa-phone"></i> 010-66666666</p>
                         <div class="facilities">
-                            <h4>设施特色：</h4>
+                            <h4 data-i18n="campus.haidianCampus.facilitiesTitle">设施特色：</h4>
                             <ul>
-                                <li><i class="fas fa-music"></i> 现代化琴房</li>
-                                <li><i class="fas fa-wifi"></i> 免费WiFi</li>
-                                <li><i class="fas fa-coffee"></i> 休息区</li>
-                                <li><i class="fas fa-parking"></i> 便利停车</li>
+                                <li><i class="fas fa-music"></i> <span data-i18n="campus.haidianCampus.facility1">现代化琴房</span></li>
+                                <li><i class="fas fa-wifi"></i> <span data-i18n="campus.haidianCampus.facility2">免费WiFi</span></li>
+                                <li><i class="fas fa-coffee"></i> <span data-i18n="campus.haidianCampus.facility3">休息区</span></li>
+                                <li><i class="fas fa-parking"></i> <span data-i18n="campus.haidianCampus.facility4">便利停车</span></li>
                             </ul>
                         </div>
-                        <a href="#" class="btn">预约参观</a>
+                        <a href="#" class="btn" data-i18n="campus.bookTour">预约参观</a>
                     </div>
                 </div>
             </div>

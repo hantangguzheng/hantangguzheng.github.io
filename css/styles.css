@@ -103,6 +103,18 @@ body {
     background: var(--primary-color);
 }
 
+/* 页脚语言切换按钮 */
+.footer-lang-switch {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.footer-bottom .lang-switch {
+    background: var(--primary-color);
+    margin: 0 auto;
+    display: inline-block;
+}
+
 /* 下拉菜单 */
 .dropdown {
     position: relative;

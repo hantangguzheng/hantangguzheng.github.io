@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/courses.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/i18n.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -28,7 +29,7 @@
                     </div>
                 </div>
                 <button class="lang-switch" onclick="toggleLanguage()">EN</button>
-                <a href="#" class="nav-item book-trial">预约试课</a>
+                <a href="#" class="nav-item book-trial" data-i18n="nav.trial">预约试课</a>
             </div>
         </div>
     </nav>
@@ -36,44 +37,44 @@
     <!-- 页面标题 -->
     <section class="page-header">
         <div class="header-content">
-            <h1>音乐课程</h1>
-            <p>探索我们丰富多样的音乐课程</p>
+            <h1 data-i18n="courses.pageTitle">音乐课程</h1>
+            <p data-i18n="courses.pageSubtitle">探索我们丰富多样的音乐课程</p>
         </div>
     </section>
 
     <!-- 课程分类 -->
     <section class="course-categories">
         <div class="container">
-            <h2>课程分类</h2>
+            <h2 data-i18n="courses.categoriesTitle">课程分类</h2>
             <div class="categories-grid">
                 <div class="category">
                     <i class="fas fa-child"></i>
-                    <h3>儿童课程</h3>
-                    <p>4-12岁</p>
+                    <h3 data-i18n="courses.childrenCourses.title">儿童课程</h3>
+                    <p data-i18n="courses.childrenCourses.ageRange">4-12岁</p>
                     <ul>
-                        <li>趣味音乐启蒙</li>
-                        <li>儿童钢琴基础</li>
-                        <li>少儿声乐培养</li>
+                        <li data-i18n="courses.childrenCourses.course1">趣味音乐启蒙</li>
+                        <li data-i18n="courses.childrenCourses.course2">儿童钢琴基础</li>
+                        <li data-i18n="courses.childrenCourses.course3">少儿声乐培养</li>
                     </ul>
                 </div>
                 <div class="category">
                     <i class="fas fa-graduation-cap"></i>
-                    <h3>青少年课程</h3>
-                    <p>13-18岁</p>
+                    <h3 data-i18n="courses.teenCourses.title">青少年课程</h3>
+                    <p data-i18n="courses.teenCourses.ageRange">13-18岁</p>
                     <ul>
-                        <li>专业器乐培训</li>
-                        <li>音乐理论学习</li>
-                        <li>艺考考级辅导</li>
+                        <li data-i18n="courses.teenCourses.course1">专业器乐培训</li>
+                        <li data-i18n="courses.teenCourses.course2">音乐理论学习</li>
+                        <li data-i18n="courses.teenCourses.course3">艺考考级辅导</li>
                     </ul>
                 </div>
                 <div class="category">
                     <i class="fas fa-user"></i>
-                    <h3>成人课程</h3>
-                    <p>18岁以上</p>
+                    <h3 data-i18n="courses.adultCourses.title">成人课程</h3>
+                    <p data-i18n="courses.adultCourses.ageRange">18岁以上</p>
                     <ul>
-                        <li>兴趣培养</li>
-                        <li>专业进修</li>
-                        <li>音乐鉴赏</li>
+                        <li data-i18n="courses.adultCourses.course1">兴趣培养</li>
+                        <li data-i18n="courses.adultCourses.course2">专业进修</li>
+                        <li data-i18n="courses.adultCourses.course3">音乐鉴赏</li>
                     </ul>
                 </div>
             </div>
@@ -83,50 +84,50 @@
     <!-- 热门课程 -->
     <section class="popular-courses">
         <div class="container">
-            <h2>热门课程</h2>
+            <h2 data-i18n="courses.popularCoursesTitle">热门课程</h2>
             <div class="courses-grid">
                 <div class="course-card">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/400x300" alt="古筝课程">
-                        <div class="course-tag">热门</div>
+                        <div class="course-tag" data-i18n="courses.guzhengCourse.tag">热门</div>
                     </div>
                     <div class="course-content">
-                        <h3>古筝课程</h3>
-                        <p class="course-description">传统与现代相结合的古筝教学，感受东方音乐之美。</p>
+                        <h3 data-i18n="courses.guzhengCourse.title">古筝课程</h3>
+                        <p class="course-description" data-i18n="courses.guzhengCourse.desc">传统与现代相结合的古筝教学，感受东方音乐之美。</p>
                         <ul class="course-features">
-                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
-                            <li><i class="fas fa-user-graduate"></i> 师资：专业古筝教师</li>
-                            <li><i class="fas fa-layer-group"></i> 难度：初级到高级</li>
+                            <li><i class="fas fa-clock"></i> <span data-i18n="courses.guzhengCourse.duration">课时：45-60分钟</span></li>
+                            <li><i class="fas fa-user-graduate"></i> <span data-i18n="courses.guzhengCourse.teacher">师资：专业古筝教师</span></li>
+                            <li><i class="fas fa-layer-group"></i> <span data-i18n="courses.guzhengCourse.level">难度：初级到高级</span></li>
                         </ul>
-                        <a href="trial.html" class="btn">预约试课</a>
+                        <a href="trial.html" class="btn" data-i18n="courses.bookTrial">预约试课</a>
                     </div>
                 </div>
                 <div class="course-card">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/400x300" alt="吉他课程">
-                        <div class="course-tag">推荐</div>
+                        <div class="course-tag" data-i18n="courses.guitarCourse.tag">推荐</div>
                     </div>
                     <div class="course-content">
-                        <h3>吉他课程</h3>
-                        <p class="course-description">流行音乐演奏技巧，让你轻松掌握吉他弹唱。</p>
+                        <h3 data-i18n="courses.guitarCourse.title">吉他课程</h3>
+                        <p class="course-description" data-i18n="courses.guitarCourse.desc">流行音乐演奏技巧，让你轻松掌握吉他弹唱。</p>
                         <ul class="course-features">
-                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
-                            <li><i class="fas fa-user-graduate"></i> 师资：专业吉他教师</li>
-                            <li><i class="fas fa-layer-group"></i> 难度：初级到中级</li>
+                            <li><i class="fas fa-clock"></i> <span data-i18n="courses.guitarCourse.duration">课时：45-60分钟</span></li>
+                            <li><i class="fas fa-user-graduate"></i> <span data-i18n="courses.guitarCourse.teacher">师资：专业吉他教师</span></li>
+                            <li><i class="fas fa-layer-group"></i> <span data-i18n="courses.guitarCourse.level">难度：初级到中级</span></li>
                         </ul>
-                        <a href="trial.html" class="btn">预约试课</a>
+                        <a href="trial.html" class="btn" data-i18n="courses.bookTrial">预约试课</a>
                     </div>
                 </div>
                 <div class="course-card">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/400x300" alt="声乐课程">
-                        <div class="course-tag">新课</div>
+                        <div class="course-tag" data-i18n="courses.vocalCourse.tag">新课</div>
                     </div>
                     <div class="course-content">
-                        <h3>声乐课程</h3>
-                        <p class="course-description">科学发声方法训练，提升演唱技巧与表现力。</p>
+                        <h3 data-i18n="courses.vocalCourse.title">声乐课程</h3>
+                        <p class="course-description" data-i18n="courses.vocalCourse.desc">科学发声方法训练，提升演唱技巧与表现力。</p>
                         <ul class="course-features">
-                            <li><i class="fas fa-clock"></i> 课时：45-60分钟</li>
+                            <li><i class="fas fa-clock"></i> <span data-i18n="courses.vocalCourse.duration">课时：45-60分钟</span></li>
                             <li><i class="fas fa-user-graduate"></i> 师资：专业声乐教师</li>
                             <li><i class="fas fa-layer-group"></i> 难度：初级到高级</li>
                         </ul>

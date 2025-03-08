@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <button class="lang-switch" onclick="toggleLanguage()">EN</button>
-                <a href="#" class="nav-item book-trial">预约试课</a>
+                <a href="#" class="nav-item book-trial" data-i18n="nav.trial">预约试课</a>
             </div>
         </div>
     </nav>
@@ -37,8 +37,8 @@
     <!-- 页面标题 -->
     <section class="page-header">
         <div class="header-content">
-            <h1>联系我们</h1>
-            <p>随时为您提供帮助和支持</p>
+            <h1 data-i18n="contact.pageTitle">联系我们</h1>
+            <p data-i18n="contact.pageSubtitle">随时为您提供帮助和支持</p>
         </div>
     </section>
 
@@ -48,20 +48,20 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <i class="fas fa-phone-alt"></i>
-                    <h3>电话咨询</h3>
-                    <p>周一至周日 9:00-21:00</p>
+                    <h3 data-i18n="contact.phoneTitle">电话咨询</h3>
+                    <p data-i18n="contact.phoneHours">周一至周日 9:00-21:00</p>
                     <p class="highlight">400-888-8888</p>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
-                    <h3>电子邮件</h3>
-                    <p>24小时内回复</p>
+                    <h3 data-i18n="contact.emailTitle">电子邮件</h3>
+                    <p data-i18n="contact.emailResponse">24小时内回复</p>
                     <p class="highlight">info@newmusic.com</p>
                 </div>
                 <div class="contact-card">
                     <i class="fab fa-weixin"></i>
-                    <h3>微信咨询</h3>
-                    <p>扫描二维码添加</p>
+                    <h3 data-i18n="contact.wechatTitle">微信咨询</h3>
+                    <p data-i18n="contact.wechatScan">扫描二维码添加</p>
                     <img src="https://via.placeholder.com/150" alt="微信二维码" class="qr-code">
                 </div>
             </div>
@@ -71,35 +71,35 @@
     <!-- 在线咨询 -->
     <section class="contact-form">
         <div class="container">
-            <h2>在线咨询</h2>
+            <h2 data-i18n="contact.onlineInquiry">在线咨询</h2>
             <form class="inquiry-form">
                 <div class="form-group">
-                    <label for="name">姓名</label>
+                    <label for="name" data-i18n="contact.nameLabel">姓名</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">电话</label>
+                    <label for="phone" data-i18n="contact.phoneLabel">电话</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">邮箱</label>
+                    <label for="email" data-i18n="contact.emailLabel">邮箱</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">咨询主题</label>
+                    <label for="subject" data-i18n="contact.subjectLabel">咨询主题</label>
                     <select id="subject" name="subject" required>
-                        <option value="">请选择咨询主题</option>
-                        <option value="course">课程咨询</option>
-                        <option value="price">价格咨询</option>
-                        <option value="trial">试课预约</option>
-                        <option value="other">其他问题</option>
+                        <option value="" data-i18n="contact.subjectPlaceholder">请选择咨询主题</option>
+                        <option value="course" data-i18n="contact.subjectCourse">课程咨询</option>
+                        <option value="price" data-i18n="contact.subjectPrice">价格咨询</option>
+                        <option value="trial" data-i18n="contact.subjectTrial">试课预约</option>
+                        <option value="other" data-i18n="contact.subjectOther">其他问题</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">咨询内容</label>
+                    <label for="message" data-i18n="contact.messageLabel">咨询内容</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn">提交咨询</button>
+                <button type="submit" class="btn" data-i18n="contact.submit">提交咨询</button>
             </form>
         </div>
     </section>
