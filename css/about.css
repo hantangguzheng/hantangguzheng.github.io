@@ -18,7 +18,7 @@
     opacity: 0.9;
 }
 
-/* 我们的故事区域 */
+/* 公司介绍区域 */
 .our-story {
     padding: var(--section-padding);
 }
@@ -173,7 +173,7 @@
     left: 0;
 }
 
-/* 师资力量区域 */
+/* 乐团成员区域 */
 .teacher-strength {
     padding: var(--section-padding);
 }

@@ -1,4 +1,15 @@
-/* 师资力量页面样式 */
+/* 乐团成员页面样式 */
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
 
 /* 页面标题区域 */
 .page-header {
@@ -34,11 +45,39 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 36px;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* 团队分类样式 */
+.team-category {
+    margin-bottom: 60px;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.category-title {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    position: relative;
+    display: inline-block;
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color, #ff6b6b);
 }
 
 .teachers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
@@ -49,11 +88,15 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+    animation-delay: calc(0.1s * var(--card-index, 0));
 }
 
 .teacher-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .teacher-image {
@@ -64,15 +107,21 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: transform 0.5s;
+    transition: transform 0.5s, filter 0.3s;
 }
 
 .teacher-card:hover .teacher-image img {
     transform: scale(1.05);
+    filter: brightness(1.05);
 }
 
 .teacher-info {
     padding: 25px;
+    transition: background-color 0.3s;
+}
+
+.teacher-card:hover .teacher-info {
+    background-color: #f9f9f9;
 }
 
 .teacher-info h3 {
@@ -108,6 +157,7 @@
 .achievements li {
     margin-bottom: 5px;
 }
+
 
 /* 教学理念 */
 .teaching-philosophy {
@@ -223,6 +273,10 @@
     
     .qualification-stats {
         margin-top: 30px;
+    }
+    
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

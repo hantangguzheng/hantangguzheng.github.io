@@ -4,9 +4,10 @@ const translations = {
         'about': {
             'pageTitle': '关于我们',
             'pageSubtitle': '了解汉唐古筝的故事和使命',
-            'storyTitle': '我们的故事',
-            'storyText1': '汉唐公司是一家专注从事古筝业务的企业，致力于传承和要求中国传统音乐文化。',
-            'storyText2': '我们的使命是让每个人都能享受到优质的古筝教育，发现传统音乐的魅力。',
+            'storyTitle': '公司介绍',
+            'storyText1': '汉唐公司成立于2012年4月，公司主要从事华乐艺术教育、艺术讲座、艺术交流、举办音乐会以及乐器和配件的经销（以华乐乐器为主）。在艺术教育方面有着雄厚的师资实力，已和多所学校建立良好的合作关系，多次在SYF华乐大赛中取得优异的成绩。公司所聘请的专业老师分别来自中国各所音乐高等学府，或者新加坡本地已经获得专业水准证书的老师。所有老师都具备新加坡教育部认证的资格证书，专业技能突出，亦有着丰富的教学经验。',
+            'storyText2': '公司注重于品德和技艺的同步发展，以"德艺双馨"为标准，进而突出奉献精神，希望达到"雨润无声"的更高层次。',
+            'storyText3': '在施教方面本着为学校、学生负责的态度，故而做事严谨，诚实守信，重视质量，愿与众多音乐与文化的爱好者共同学习，共同进步，同时希望能够为本地的华乐发展贡献力量。',
             'scopeTitle': '业务范围',
             'education': {
                 'title': '古筝教育',
@@ -165,7 +166,7 @@ const translations = {
                     'author': '- 林女士'
                 },
                 'review5': {
-                    'text': '"师资力量雄厚，教学质量有保证。"',
+                    'text': '"乐团成员雄厚，教学质量有保证。"',
                     'author': '- 陈先生'
                 }
             }
@@ -179,7 +180,7 @@ const translations = {
             'campus': '校区',
             'contact': '联系我们',
             'trial': '预约试课',
-            'teachers': '师资力量',
+            'teachers': '乐团成员',
         },
         'footer': {
             'aboutUs': '关于我们',
@@ -204,9 +205,9 @@ const translations = {
             'rights': '保留所有权利',
         },
         'teachers': {
-            'pageTitle': '师资力量',
+            'pageTitle': '汉唐中华古筝团',
             'pageSubtitle': '遇见您的专业音乐导师',
-            'teamTitle': '专业教师团队',
+            'teamTitle': '汉唐中华古筝团成员',
             'piano': '钢琴教师',
             'pianoTeacher': '陈教授',
             'pianoRole': '钢琴教学主任',
@@ -257,8 +258,9 @@ const translations = {
             'pageTitle': 'About Us',
             'pageSubtitle': 'Learn about Hantang Guzheng\'s story and mission',
             'storyTitle': 'Our Story',
-            'storyText1': 'Hantang Company is an enterprise focused on guzheng business, committed to inheriting and promoting traditional Chinese music culture.',
-            'storyText2': 'Our mission is to enable everyone to enjoy quality guzheng education and discover the charm of traditional music.',
+            'storyText1': 'HAN TANG PTE. LTD. was found in April 2012, mainly focusing on art education, art lecture, art exchange of traditional Chinese music, holding concerts, and musical instruments and accessories distributions (with Guzheng as the priority) . The company has a strong teachers strength in the aspect of art education, established good cooperative relations with many schools, and obtained excellent results in SYF Chinese music contest. Teachers hired in HAN TANG PTE. LTD. are professionals coming from famous Chinese music universities and/or Singapore local. All teachers have qualification certificates from Ministry of Education of Singapore government with outstanding professional skills and teaching experience.',
+            'storyText2': 'The company lays emphasis on the synchronous development of both character and skill. On this basis, the company highlights the spirit of dedication, and hope to reach a higher level.',
+            'storyText3': 'In the aspect of teaching, all teachers hold the responsible attitude for both school and students, and thus work with rigorous, honest and trustworthy, and focusing on the quality. The company is willing to work with many lovers of music and culture to learn together, make progress together, and hopes to make contributions to local development of Chinese music.',
             'scopeTitle': 'Business Scope',
             'education': {
                 'title': 'Guzheng Education',

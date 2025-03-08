@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品展示 - 汉唐古筝</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">Singapore汉唐古筝</a>
+            </div>
+            <div class="nav-links">
+                <a href="courses.html" class="nav-item" data-i18n="nav.courses">音乐课程</a>
+                <a href="gallery.html" class="nav-item" data-i18n="nav.gallery">作品长廊</a>
+                <!-- <a href="campus.html" class="nav-item" data-i18n="nav.campus">校区</a> -->
+                <a href="products.html" class="nav-item" data-i18n="nav.prod">商品</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-item active" data-i18n="nav.about">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="teachers.html" data-i18n="nav.teachers">乐团成员</a>
+                        <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+                    </div>
+                </div>
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+                <a href="#" class="nav-item book-trial" data-i18n="nav.trial">预约试课</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 商品分类导航 -->
+    <div class="product-nav">
+        <div class="container">
+            <ul class="category-nav">
+                <li><a href="#strings" class="active">古筝琴弦</a></li>
+                <li><a href="#nails">古筝指甲</a></li>
+                <li><a href="#accessories">古筝配件</a></li>
+                <li><a href="#books">书籍与光盘</a></li>
+                <li><a href="#guzheng">古筝</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 商品展示区域 -->
+    <main class="products-container">
+        <div class="container">
+            <!-- 古筝琴弦 -->
+            <section id="strings" class="product-section">
+                <h2>古筝琴弦</h2>
+                <div class="product-grid">
+                    <!-- 朱雀琴弦 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>朱雀琴弦</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>弦号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>#01</td><td>$2.60</td></tr>
+                                    <tr><td>#02</td><td>$2.70</td></tr>
+                                    <tr><td>#03</td><td>$2.70</td></tr>
+                                    <tr><td>#04</td><td>$2.80</td></tr>
+                                    <tr><td>#05</td><td>$2.90</td></tr>
+                                    <tr><td>#06</td><td>$3.00</td></tr>
+                                    <tr><td>#07</td><td>$3.20</td></tr>
+                                    <tr><td>#08</td><td>$3.40</td></tr>
+                                    <tr><td>#09</td><td>$3.60</td></tr>
+                                    <tr><td>#10</td><td>$3.80</td></tr>
+                                    <tr><td>#11</td><td>$4.00</td></tr>
+                                    <tr><td>#12</td><td>$4.30</td></tr>
+                                    <tr><td>#13</td><td>$4.60</td></tr>
+                                    <tr><td>#14</td><td>$4.90</td></tr>
+                                    <tr><td>#15</td><td>$5.50</td></tr>
+                                    <tr><td>#16</td><td>$6.00</td></tr>
+                                    <tr><td>#17</td><td>$6.30</td></tr>
+                                    <tr><td>#18</td><td>$6.70</td></tr>
+                                    <tr><td>#19</td><td>$7.00</td></tr>
+                                    <tr><td>#20</td><td>$7.50</td></tr>
+                                    <tr><td>#21</td><td>$8.00</td></tr>
+                                    <tr class="highlight"><td>#01-21全部</td><td>$95.50</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 敦煌琴弦 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>敦煌琴弦</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>弦号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>#01</td><td>$2.40</td></tr>
+                                    <tr><td>#02</td><td>$2.40</td></tr>
+                                    <tr><td>#03</td><td>$2.50</td></tr>
+                                    <tr><td>#04</td><td>$2.50</td></tr>
+                                    <tr><td>#05</td><td>$2.70</td></tr>
+                                    <tr><td>#06</td><td>$3.00</td></tr>
+                                    <tr><td>#07</td><td>$3.00</td></tr>
+                                    <tr><td>#08</td><td>$3.00</td></tr>
+                                    <tr><td>#09</td><td>$3.20</td></tr>
+                                    <tr><td>#10</td><td>$3.20</td></tr>
+                                    <tr><td>#11</td><td>$3.80</td></tr>
+                                    <tr><td>#12</td><td>$3.80</td></tr>
+                                    <tr><td>#13</td><td>$4.30</td></tr>
+                                    <tr><td>#14</td><td>$4.30</td></tr>
+                                    <tr><td>#15</td><td>$5.30</td></tr>
+                                    <tr><td>#16</td><td>$5.50</td></tr>
+                                    <tr><td>#17</td><td>$6.30</td></tr>
+                                    <tr><td>#18</td><td>$6.50</td></tr>
+                                    <tr><td>#19</td><td>$7.30</td></tr>
+                                    <tr><td>#20</td><td>$7.50</td></tr>
+                                    <tr><td>#21</td><td>$7.50</td></tr>
+                                    <tr class="highlight"><td>#01-21全部</td><td>$90.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 练习弦 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>练习弦</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>弦号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>#01-#07</td><td>$1.00/根</td></tr>
+                                    <tr><td>#08-#14</td><td>$2.00/根</td></tr>
+                                    <tr><td>#15-#21</td><td>$3.00/根</td></tr>
+                                    <tr class="highlight"><td>#01-21全部</td><td>$42.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 古筝指甲 -->
+            <section id="nails" class="product-section">
+                <h2>古筝指甲</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>专业指甲</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>生料单槽大</td><td>$50.00</td></tr>
+                                    <tr><td>生料单槽中</td><td>$50.00</td></tr>
+                                    <tr><td>生料单槽小</td><td>$40.00</td></tr>
+                                    <tr><td>专业单槽大</td><td>$40.00</td></tr>
+                                    <tr><td>专业单槽小</td><td>$40.00</td></tr>
+                                    <tr><td>牛角专业型</td><td>$20.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 古筝配件 -->
+            <section id="accessories" class="product-section">
+                <h2>古筝配件</h2>
+                <div class="product-grid">
+                    <!-- 基础配件 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>基础配件</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>古筝指甲板</td><td>-</td><td>$2.00</td></tr>
+                                    <tr><td>古筝练指器</td><td>-</td><td>$20.00</td></tr>
+                                    <tr><td>胶布</td><td>古筝专用型</td><td>$1.00</td></tr>
+                                    <tr><td>胶布</td><td>医用型</td><td>$2.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 琴凳 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>古筝琴凳</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>普通型素面</td><td>$80.00</td></tr>
+                                    <tr><td>印花</td><td>$90.00</td></tr>
+                                    <tr><td>高级专业型</td><td>-</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 调音器 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>古筝调音器</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>小天使WST700B</td><td>$70.00</td></tr>
+                                    <tr><td>小天使WST600B</td><td>$40.00</td></tr>
+                                    <tr><td>MT-80B</td><td>$30.00</td></tr>
+                                    <tr><td>MT-100B</td><td>$30.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 琴包 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>古筝琴包</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>高级加厚带轮</td><td>$200.00</td></tr>
+                                    <tr><td>普通加厚</td><td>$80.00</td></tr>
+                                    <tr><td>标准普通</td><td>$40.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 琴罩 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>古筝琴罩</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>勾枝花珠</td><td>$25.00</td></tr>
+                                    <tr><td>普通印花</td><td>$20.00</td></tr>
+                                    <tr><td>透花蕾丝</td><td>$15.00</td></tr>
+                                    <tr><td>普通平绒</td><td>$10.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 琴架 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>古筝琴架</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>高级双槽大号</td><td>$200.00</td></tr>
+                                    <tr><td>普通单手大号</td><td>$70.00</td></tr>
+                                    <tr><td>仿古A字琴架</td><td>$50.00</td></tr>
+                                    <tr><td>普通A字琴架</td><td>$45.00</td></tr>
+                                    <tr><td>H型窗花架</td><td>$100.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 谱架 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>谱架</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>标准便携谱架</td><td>$25.00</td></tr>
+                                    <tr><td>专业平板谱架</td><td>$40.00</td></tr>
+                                    <tr><td>平板薄谱架</td><td>-</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 书籍与光盘 -->
+            <section id="books" class="product-section">
+                <h2>书籍与光盘</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>教学资源</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>《筝鸣》书</td><td>第二版</td><td>$20.00</td></tr>
+                                    <tr><td>《筝鸣》光盘</td><td>-</td><td>$20.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 古筝 -->
+            <section id="guzheng" class="product-section">
+                <h2>古筝</h2>
+                <div class="product-grid">
+                    <!-- 朱雀古筝 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>朱雀古筝</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>05</td><td>$1300-1500</td></tr>
+                                    <tr><td>520</td><td>$613</td></tr>
+                                    <tr><td>1900-2100</td><td>$550</td></tr>
+                                    <tr><td>560</td><td>$1900-2100</td></tr>
+                                    <tr><td>630</td><td>-</td></tr>
+                                    <tr><td>09A</td><td>$5000-5500</td></tr>
+                                    <tr><td>980</td><td>$7500-8000</td></tr>
+                                    <tr><td>011A</td><td>$1400-1600</td></tr>
+                                    <tr><td>696M</td><td>$696D</td></tr>
+                                    <tr><td>750-850</td><td>-</td></tr>
+                                    <tr><td>689E</td><td>$689L</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 敦煌古筝 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>敦煌古筝</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>694DQ</td><td>$1900-2100</td></tr>
+                                    <tr><td>694PP</td><td>$1900-2100</td></tr>
+                                    <tr><td>694KK</td><td>$1900-2100</td></tr>
+                                    <tr><td>698F</td><td>素华朱实 $1800-2000</td></tr>
+                                    <tr><td>花蓉</td><td>$2000-2200</td></tr>
+                                    <tr><td>雁塔归云</td><td>$2300-2500</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 长安古筝 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>长安古筝</h3>
+                        </div>
+                        <div class="product-content">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>型号</th>
+                                        <th>零售参考价</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>观沧海</td><td>$2800-3000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="nav.about">关于我们</h3>
+                <ul>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="courses.html" data-i18n="nav.courses">课程介绍</a></li>
+                    <li><a href="campus.html" data-i18n="nav.campus">校区地址</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.followUs">关注我们</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/HanTangChineseGuzheng"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://mp.weixin.qq.com/s/bqlW4GV55tynwhcvJjwkHQ"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKUIYjlNco-smZfmOsk_ziA"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.wechatAccount">关注我们的微信公众号</h3>
+                <div class="wechat-qrcode">
+                    <img src="../images/wxht.jpg" alt="微信公众号二维码" style="max-width: 450px; border-radius: 5px;">
+                    <p style="margin-top: 10px;" data-i18n="footer.scanQRCode">扫码关注获取最新资讯</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2024 汉唐古筝. 保留所有权利.</p>
+            <p><a href="#" data-i18n="footer.terms">使用条款</a> | <a href="#" data-i18n="footer.privacy">隐私政策</a></p>
+            <div class="footer-lang-switch">
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 商品分类导航切换效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryLinks = document.querySelectorAll('.category-nav a');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 获取目标元素
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // 计算滚动位置，考虑导航栏和分类导航的高度
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const categoryNavHeight = document.querySelector('.product-nav').offsetHeight;
+                        const totalOffset = navbarHeight + categoryNavHeight;
+                        
+                        // 平滑滚动到目标位置
+                        window.scrollTo({
+                            top: targetElement.offsetTop - totalOffset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 滚动监听，高亮当前分类
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.product-section');
+                let current = '';
+                
+                // 获取导航栏高度，用于计算偏移量
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const categoryNavHeight = document.querySelector('.product-nav').offsetHeight;
+                const totalOffset = navbarHeight + categoryNavHeight + 20; // 额外添加一些空间
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - totalOffset)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                categoryLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
