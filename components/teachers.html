@@ -173,35 +173,38 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3 data-i18n="footer.about">关于我们</h3>
+                <h3 data-i18n="nav.about">关于我们</h3>
                 <ul>
-                    <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
-                    <li><a href="courses.html" data-i18n="footer.courses">课程介绍</a></li>
-                    <li><a href="campus.html" data-i18n="footer.campus">校区地址</a></li>
-                    <li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="courses.html" data-i18n="nav.courses">课程介绍</a></li>
+                    <li><a href="campus.html" data-i18n="nav.campus">校区地址</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3 data-i18n="footer.followUs">关注我们</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/HanTangChineseGuzheng"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://mp.weixin.qq.com/s/bqlW4GV55tynwhcvJjwkHQ"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKUIYjlNco-smZfmOsk_ziA"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-section">
-                <h3 data-i18n="footer.newsletter">订阅新闻</h3>
-                <form class="newsletter-form">
-                    <input type="email" data-i18n-placeholder="footer.emailPlaceholder" placeholder="输入您的邮箱">
-                    <button type="submit" class="btn" data-i18n="footer.subscribe">订阅</button>
-                </form>
+                <h3 data-i18n="footer.wechatAccount">关注我们的微信公众号</h3>
+                <div class="wechat-qrcode">
+                    <img src="../images/wxht.jpg" alt="微信公众号二维码" style="max-width: 450px; border-radius: 5px;">
+                    <p style="margin-top: 10px;" data-i18n="footer.scanQRCode">扫码关注获取最新资讯</p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 汉唐古筝. <span data-i18n="footer.rights">保留所有权利</span>.</p>
+            <p data-i18n="footer.copyright">&copy; 2024 汉唐古筝. 保留所有权利.</p>
             <p><a href="#" data-i18n="footer.terms">使用条款</a> | <a href="#" data-i18n="footer.privacy">隐私政策</a></p>
+            <div class="footer-lang-switch">
+                <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+            </div>
         </div>
     </footer>
 
