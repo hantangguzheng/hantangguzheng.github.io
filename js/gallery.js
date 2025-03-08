@@ -837,14 +837,39 @@ function exitZoomMode() {
         console.log('没有找到currentOverlay元素');
     }
     
+    // 重置3D画廊到初始状态
+    console.log('重置3D画廊到初始状态');
+    
+    // 清除现有的场景对象
+    while(scene.children.length > 0){ 
+        scene.remove(scene.children[0]); 
+    }
+    
+    // 重置相机位置
+    camera.position.set(0, 1.7, 5);
+    camera.rotation.set(0, 0, 0);
+    
+    // 重新创建场景
+    createScene();
+    
+    // 重新创建灯光
+    createLights();
+    
+    // 重新创建展厅
+    createGallery();
+    
+    // 重新添加控制器到场景
+    scene.add(controls.getObject());
+    
     // 立即重新启用控制器
-    if (isGalleryActive) {
-        console.log('重新锁定控制器');
-        try {
-            controls.lock();
-        } catch (error) {
-            console.error('重新锁定控制器时出错:', error);
-        }
+    console.log('重新锁定控制器');
+    try {
+        // 确保画廊状态被激活
+        isGalleryActive = true;
+        document.body.classList.add('gallery-active');
+        controls.lock();
+    } catch (error) {
+        console.error('重新锁定控制器时出错:', error);
     }
     currentIntersectedFrame = null;
     
