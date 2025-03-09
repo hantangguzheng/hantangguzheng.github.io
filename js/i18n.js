@@ -46,8 +46,8 @@ const translations = {
                     'desc': '经验丰富的教师团队为您量身定制课程'
                 },
                 'app': {
-                    'title': '手机应用',
-                    'desc': '随时随地查看课程进度和练习记录'
+                    'title': '在线学习',
+                    'desc': '随时随地查看在线学习课程和表演记录'
                 },
                 'environment': {
                     'title': '温馨环境',
