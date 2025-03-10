@@ -378,30 +378,37 @@ const translations = {
                 }
             },
             'pricing': {
-                'title': 'Course Pricing',
-                'package1': {
-                    'title': '30-Minute Course',
-                    'price': '¥200/session',
-                    'feature1': '4 sessions per month',
-                    'feature2': 'One-on-one teaching',
-                    'feature3': 'Free equipment use'
+                'title': 'Guzheng Courses',
+                'groupClass': {
+                    'title': 'Group Class',
+                    'location1': 'Paya Lebar Kovan Community Club',
+                    'location1_en': 'Paya Lebar Kovan Community Club',
+                    'address1': 'Address: Blk 207 Hougang st 21 (530207)',
+                    'phone1': 'Tel: ‭+65 6285 4676‬',
+                    'schedule1': 'Guzheng Class Schedule',
+                    'time1_1': 'Thursday 6:00pm-7:00pm',
+                    'time1_2': 'Thursday 8:00pm-9:00pm',
+                    'time1_3': 'Saturday 11:30am-12:30am',
+                    'time1_4': 'Saturday 12:30am-1:30pm',
+                    'time1_5': 'Saturday 2:30pm-3:30pm',
+                    'class_size1': '60 minutes per session, 3-9 students per class',
+                    'price1': 'Tuition: S$150-180 (10 lessons)',
+                    'price1_member': 'Member: S$140-170',
+                    'location2': 'Siglap South Community Club',
+                    'location2_en': 'Siglap South Community Club',
+                    'address2': 'Address: 6 Palm Rd Singapore 456441',
+                    'phone2': 'Tel: ‭+65 6241 1925‬',
+                    'schedule2': 'Guzheng Class Schedule',
+                    'time2_1': 'Tuesday 7:00pm-8:00pm',
+                    'class_size2': '60 minutes per session, 3-8 students per class',
+                    'price2': 'Tuition: S$150-180 (10 lessons)',
+                    'price2_member': 'Member: S$140-170'
                 },
-                'package2': {
-                    'title': '45-Minute Course',
-                    'price': '¥280/session',
-                    'feature1': '4 sessions per month',
-                    'feature2': 'One-on-one teaching',
-                    'feature3': 'Free equipment use',
-                    'feature4': 'Post-class practice guidance'
-                },
-                'package3': {
-                    'title': '60-Minute Course',
-                    'price': '¥350/session',
-                    'feature1': '4 sessions per month',
-                    'feature2': 'One-on-one teaching',
-                    'feature3': 'Free equipment use',
-                    'feature4': 'Post-class practice guidance',
-                    'feature5': 'Regular concert performances'
+                'privateClass': {
+                    'title': 'Private Class',
+                    'option1': '30+ years teaching experience (no home visits)',
+                    'option2': '5-10 years teaching experience (home visits available)',
+                    'option3': '2-5 years teaching experience (home visits available)'
                 },
                 'bookTrial': 'Book Trial'
             },
