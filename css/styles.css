@@ -329,7 +329,7 @@ body {
 }
 
 .price-package {
-    text-align: center;
+    text-align: left;
     padding: 40px;
     background: #fff;
     border-radius: 10px;
@@ -337,7 +337,8 @@ body {
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 100%;
 }
 
@@ -350,10 +351,25 @@ body {
     transform: translateY(-10px);
 }
 
+.price-package h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.price-package h4 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 .price {
-    font-size: 36px;
+    font-size: 20px;
     color: var(--primary-color);
     margin: 20px 0;
+}
+
+.price-package.featured .price {
+    color: #fff;
 }
 
 .price-package ul {
@@ -363,6 +379,20 @@ body {
 
 .price-package li {
     margin: 10px 0;
+}
+
+.location-info {
+    text-align: left;
+}
+
+.location-info p {
+    margin-bottom: 8px;
+}
+
+.location-info ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 /* 博客区域 */

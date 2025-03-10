@@ -90,7 +90,7 @@ const translations = {
                 },
                 'step2': {
                     'title': '参加试课',
-                    'desc': '体验专业的一对一教学'
+                    'desc': '体验专业的一对一、一对多教学'
                 },
                 'step3': {
                     'title': '开始学习',
@@ -98,30 +98,35 @@ const translations = {
                 }
             },
             'pricing': {
-                'title': '课程价格',
-                'package1': {
-                    'title': '30分钟课程',
-                    'price': '¥200/节',
-                    'feature1': '每月4节课',
-                    'feature2': '一对一教学',
-                    'feature3': '免费使用设备'
+                'title': '古筝授课',
+                'groupClass': {
+                    'title': '古筝授课 - 大班',
+                    'location1': '巴耶礼峇高文民众俱乐部',
+                    'location1_en': 'Paya Lebar Kovan community club',
+                    'address1': 'Blk 207 Hougang st 21 (530207)',
+                    'phone1': '+65 6285 4676',
+                    'schedule1': '古筝课程时间',
+                    'time1_1': '拜四 6:00pm-7:00pm',
+                    'time1_2': '拜四 8:00pm-9:00pm',
+                    'time1_3': '拜六 11:30am-12:30am',
+                    'time1_4': '拜六 12:30am-1:30pm',
+                    'time1_5': '拜六 2:30pm-3:30pm',
+                    'class_size1': '每次60分钟，一个班3-9人',
+                    'price1': '学费: S$150-180 (10节课) 会员S$140-170',
+                    'location2': '东海岸实乙乞纳南民众俱乐部',
+                    'location2_en': 'Siglap south community club',
+                    'address2': '6 Palm Rd Singapore 456441',
+                    'phone2': '+65 6241 1925',
+                    'schedule2': '古筝课程时间',
+                    'time2_1': '拜二 7:00pm-8:00pm',
+                    'class_size2': '每节课60分钟，一个班3-8人',
+                    'price2': '学费: S$150-180 (10节课) 会员S$140-170'
                 },
-                'package2': {
-                    'title': '45分钟课程',
-                    'price': '¥280/节',
-                    'feature1': '每月4节课',
-                    'feature2': '一对一教学',
-                    'feature3': '免费使用设备',
-                    'feature4': '课后练习指导'
-                },
-                'package3': {
-                    'title': '60分钟课程',
-                    'price': '¥350/节',
-                    'feature1': '每月4节课',
-                    'feature2': '一对一教学',
-                    'feature3': '免费使用设备',
-                    'feature4': '课后练习指导',
-                    'feature5': '定期音乐会表演'
+                'privateClass': {
+                    'title': '单人课',
+                    'option1': '30年教学经验以上（不上门）',
+                    'option2': '5-10年教学经验（可上门）',
+                    'option3': '2-5年教学经验（可上门）'
                 },
                 'bookTrial': '预约试课'
             },
@@ -365,7 +370,7 @@ const translations = {
                 },
                 'step2': {
                     'title': 'Attend the Trial',
-                    'desc': 'Experience professional one-on-one teaching'
+                    'desc': 'Experience professional one-on-one and one-to-many teaching'
                 },
                 'step3': {
                     'title': 'Start Learning',
