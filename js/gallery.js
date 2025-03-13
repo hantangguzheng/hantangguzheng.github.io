@@ -14,6 +14,7 @@ let currentIntersectedFrame = null;
 let isZoomedIn = false;
 let currentVideo = null;
 let currentOverlay = null;
+let currentEscHint = null; // 添加ESC提示元素的引用
 
 // 初始化函数
 function init() {
@@ -154,7 +155,7 @@ function createControls() {
     
     // 点击画面开始体验
     renderer.domElement.addEventListener('click', () => {
-        if (!isGalleryActive) {
+        if (!isGalleryActive && !isZoomedIn) {
             // 激活画廊
             document.body.classList.add('gallery-active');
             isGalleryActive = true;
@@ -173,13 +174,20 @@ function createControls() {
     
     // 当控制器锁定/解锁时的事件
     controls.addEventListener('lock', () => {
-        document.body.classList.add('gallery-active');
+        if (!isZoomedIn) { // 只有在非放大模式下才更新画廊状态
+            document.body.classList.add('gallery-active');
+        }
     });
     
     controls.addEventListener('unlock', () => {
-        if (isGalleryActive) {
+        // 修改：只有在非放大模式下才更新画廊状态
+        // 这样当从放大模式退出时，不会错误地将isGalleryActive设为false
+        if (isGalleryActive && !isZoomedIn) {
+            console.log('控制器解锁，且不在放大模式，退出画廊');
             document.body.classList.remove('gallery-active');
             isGalleryActive = false;
+        } else {
+            console.log('控制器解锁，但在放大模式或画廊未激活，保持当前状态');
         }
     });
     
@@ -518,11 +526,10 @@ function addEventListeners() {
             // 检查是否点击了画框
             checkFrameIntersection();
         }
-    });
-    
+    });    
     // 移动更新函数
     window.moveUpdate = () => {
-        if (!isGalleryActive || isZoomedIn) return;
+        if (!isGalleryActive || isZoomedIn) return; // 在放大模式下禁用移动
         
         // 前后左右移动
         if (keysPressed['KeyW'] || keysPressed['ArrowUp']) {
@@ -694,6 +701,11 @@ function handleSpaceKey() {
 function zoomIntoArtwork(frame) {
     isZoomedIn = true;
     
+    // 解锁指针控制，允许用户自由移动鼠标
+    if (controls.isLocked) {
+        controls.unlock();
+    }
+    
     // 获取画框中的画布（第二个子对象）
     const canvas = frame.children[1];
     
@@ -716,24 +728,41 @@ function zoomIntoArtwork(frame) {
         imagePath = '../images/logo.png';
     }
     
-    // 创建背景遮罩
+    // 创建背景遮罩 - 修改为半透明，保留3D场景可见
     const overlay = document.createElement('div');
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
     overlay.style.left = '0';
     overlay.style.width = '100%';
     overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
     overlay.style.zIndex = '999';
     overlay.style.opacity = '0';
     overlay.style.transition = 'opacity 0.5s';
-    document.body.appendChild(overlay);
+    overlay.style.pointerEvents = 'none'; // 修改为none，允许点击事件穿透到3D场景
+    document.getElementById('gallery-container').appendChild(overlay);
     currentOverlay = overlay;
     
     // 淡入遮罩
     setTimeout(() => {
         overlay.style.opacity = '1';
     }, 100);
+    
+    // 添加ESC键提示
+    const escHint = document.createElement('div');
+    escHint.style.position = 'fixed';
+    escHint.style.bottom = '20px';
+    escHint.style.left = '50%';
+    escHint.style.transform = 'translateX(-50%)';
+    escHint.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    escHint.style.color = 'white';
+    escHint.style.padding = '10px 20px';
+    escHint.style.borderRadius = '5px';
+    escHint.style.zIndex = '1001';
+    escHint.style.fontSize = '14px';
+    escHint.innerHTML = '<i class="fas fa-keyboard"></i> 按ESC键退出查看';
+    document.getElementById('gallery-container').appendChild(escHint);
+    currentEscHint = escHint; // 保存引用以便后续移除
     
     // 创建视频元素（如果是对应的图片）
     const fileName = imagePath.split('/').pop();
@@ -744,14 +773,16 @@ function zoomIntoArtwork(frame) {
         video.style.top = '50%';
         video.style.left = '50%';
         video.style.transform = 'translate(-50%, -50%)';
-        video.style.maxWidth = '90vw';
-        video.style.maxHeight = '90vh';
+        video.style.width = '80%'; // 设置为屏幕宽度的80%
+        video.style.height = 'auto';
+        video.style.maxHeight = '80vh'; // 最大高度为视口高度的80%
         video.style.zIndex = '1000';
         video.style.opacity = '0';
         video.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.3)';
         video.style.borderRadius = '4px';
+        video.style.pointerEvents = 'auto'; // 确保视频控件可以点击
         video.controls = true;
-        document.body.appendChild(video);
+        document.getElementById('gallery-container').appendChild(video);
         currentVideo = video;
         
         // 淡入效果
@@ -768,14 +799,17 @@ function zoomIntoArtwork(frame) {
         enlargedImage.style.top = '50%';
         enlargedImage.style.left = '50%';
         enlargedImage.style.transform = 'translate(-50%, -50%) scale(0.8)';
-        enlargedImage.style.maxWidth = '90vw';
-        enlargedImage.style.maxHeight = '90vh';
+        enlargedImage.style.width = 'auto';
+        enlargedImage.style.height = 'auto';
+        enlargedImage.style.maxWidth = '80%'; // 最大宽度为视口宽度的80%
+        enlargedImage.style.maxHeight = '80vh'; // 最大高度为视口高度的80%
         enlargedImage.style.zIndex = '1000';
         enlargedImage.style.opacity = '0';
         enlargedImage.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.3)';
         enlargedImage.style.borderRadius = '4px';
         enlargedImage.style.transition = 'transform 0.5s, opacity 0.5s';
-        document.body.appendChild(enlargedImage);
+        enlargedImage.style.pointerEvents = 'none'; // 图片不需要交互
+        document.getElementById('gallery-container').appendChild(enlargedImage);
         currentVideo = enlargedImage; // 复用currentVideo变量存储图片元素
         
         // 淡入并放大效果
@@ -785,8 +819,13 @@ function zoomIntoArtwork(frame) {
         }, 100);
     }
     
-    // 禁用控制器
-    controls.unlock();
+    // 移除点击遮罩退出功能，只保留ESC键退出方式
+    // overlay.addEventListener('click', (event) => {
+    //     // 只有当点击的是遮罩本身而不是其子元素时才退出
+    //     if (event.target === overlay) {
+    //         exitZoomMode();
+    //     }
+    // });
 }
 
 // 退出放大模式
@@ -795,82 +834,102 @@ function exitZoomMode() {
     if (!isZoomedIn) return;
     
     console.log('开始退出放大模式');
+    
+    // 添加一个临时标记，表示正在从放大模式退出
+    // 这将防止controls.unlock事件处理器错误地将isGalleryActive设为false
+    const wasInZoomMode = isZoomedIn;
     isZoomedIn = false;
     
-    // 立即移除视频或图片，不使用淡出效果
+    // 移除视频或图片
     if (currentVideo) {
         console.log('移除视频或图片元素:', currentVideo.tagName);
         if (currentVideo.tagName === 'VIDEO') {
             currentVideo.pause();
         }
-        // 直接移除元素，不使用过渡效果
-        try {
-            if (document.body.contains(currentVideo)) {
-                document.body.removeChild(currentVideo);
-                console.log('已立即从DOM中移除视频/图片元素');
-            } else {
-                console.log('视频/图片元素不在DOM中');
+        // 使用淡出效果
+        currentVideo.style.opacity = '0';
+        setTimeout(() => {
+            try {
+                if (document.getElementById('gallery-container').contains(currentVideo)) {
+                    document.getElementById('gallery-container').removeChild(currentVideo);
+                    console.log('已从DOM中移除视频/图片元素');
+                } else {
+                    console.log('视频/图片元素不在DOM中');
+                }
+            } catch (error) {
+                console.error('移除视频/图片元素时出错:', error);
             }
-        } catch (error) {
-            console.error('移除视频/图片元素时出错:', error);
-        }
-        currentVideo = null;
+            currentVideo = null;
+        }, 500); // 等待淡出动画完成
     } else {
         console.log('没有找到currentVideo元素');
     }
     
-    // 立即移除遮罩，不使用淡出效果
-    if (currentOverlay) {
-        console.log('移除遮罩元素');
+    // 移除ESC提示
+    if (currentEscHint) {
         try {
-            if (document.body.contains(currentOverlay)) {
-                document.body.removeChild(currentOverlay);
-                console.log('已立即从DOM中移除遮罩元素');
-            } else {
-                console.log('遮罩元素不在DOM中');
+            if (document.getElementById('gallery-container').contains(currentEscHint)) {
+                document.getElementById('gallery-container').removeChild(currentEscHint);
+                console.log('已从DOM中移除ESC提示元素');
             }
         } catch (error) {
-            console.error('移除遮罩元素时出错:', error);
+            console.error('移除ESC提示元素时出错:', error);
         }
-        currentOverlay = null;
+        currentEscHint = null;
+    }
+    
+    // 移除遮罩
+    if (currentOverlay) {
+        console.log('移除遮罩元素');
+        currentOverlay.style.opacity = '0';
+        setTimeout(() => {
+            try {
+                if (document.getElementById('gallery-container').contains(currentOverlay)) {
+                    document.getElementById('gallery-container').removeChild(currentOverlay);
+                    console.log('已从DOM中移除遮罩元素');
+                } else {
+                    console.log('遮罩元素不在DOM中');
+                }
+            } catch (error) {
+                console.error('移除遮罩元素时出错:', error);
+            }
+            currentOverlay = null;
+            
+            // 移动到这里，确保在遮罩完全移除后再尝试锁定控制器
+            // 这样可以避免与unlock事件的冲突
+            if (wasInZoomMode && isGalleryActive) {
+                try {
+                    console.log('尝试重新锁定控制器，保持画廊模式');
+                    // 添加延迟，确保DOM操作完成后再锁定
+                    setTimeout(() => {
+                        if (isGalleryActive && !controls.isLocked) {
+                            controls.lock();
+                            console.log('控制器已重新锁定');
+                        }
+                    }, 100);
+                } catch (error) {
+                    console.error('重新锁定控制器失败:', error);
+                }
+            }
+        }, 500); // 等待淡出动画完成
     } else {
         console.log('没有找到currentOverlay元素');
+        // 如果没有遮罩，也要尝试锁定控制器
+        if (wasInZoomMode && isGalleryActive) {
+            try {
+                console.log('尝试重新锁定控制器，保持画廊模式');
+                setTimeout(() => {
+                    if (isGalleryActive && !controls.isLocked) {
+                        controls.lock();
+                        console.log('控制器已重新锁定');
+                    }
+                }, 100);
+            } catch (error) {
+                console.error('重新锁定控制器失败:', error);
+            }
+        }
     }
     
-    // 重置3D画廊到初始状态
-    console.log('重置3D画廊到初始状态');
-    
-    // 清除现有的场景对象
-    while(scene.children.length > 0){ 
-        scene.remove(scene.children[0]); 
-    }
-    
-    // 重置相机位置
-    camera.position.set(0, 1.7, 5);
-    camera.rotation.set(0, 0, 0);
-    
-    // 重新创建场景
-    createScene();
-    
-    // 重新创建灯光
-    createLights();
-    
-    // 重新创建展厅
-    createGallery();
-    
-    // 重新添加控制器到场景
-    scene.add(controls.getObject());
-    
-    // 立即重新启用控制器
-    console.log('重新锁定控制器');
-    try {
-        // 确保画廊状态被激活
-        isGalleryActive = true;
-        document.body.classList.add('gallery-active');
-        controls.lock();
-    } catch (error) {
-        console.error('重新锁定控制器时出错:', error);
-    }
     currentIntersectedFrame = null;
     
     console.log('exitZoomMode函数执行完毕');
