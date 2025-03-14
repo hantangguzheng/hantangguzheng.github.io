@@ -145,7 +145,7 @@ const translations = {
                     'readMore': '阅读更多'
                 },
                 'post3': {
-                    'title': '练习技巧分享',
+                    'title': '古筝练习技巧分享',
                     'date': '2024年3月5日',
                     'excerpt': '提高练习效率的实用方法...',
                     'readMore': '阅读更多'
