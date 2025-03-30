@@ -113,10 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // 为所有包含"预约"或"预订"字样的元素添加点击事件
-        const bookingElements = document.querySelectorAll('a, button');
+        const bookingElements = document.querySelectorAll('a, button, .fab.fa-whatsapp');
         bookingElements.forEach(element => {
             const text = element.textContent.trim();
-            if (text.includes('预约') || text.includes('预订')) {
+            if (text.includes('预约') || text.includes('预订') || text.includes('了解') || element.classList.contains('fab') && element.classList.contains('fa-whatsapp')) {
                 element.addEventListener('click', (e) => {
                     e.preventDefault();
                     showToast('请拨打电话：+65 9765 0902');
