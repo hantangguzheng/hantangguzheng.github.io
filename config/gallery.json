@@ -1,0 +1,53 @@
+{
+    "images": [
+      {
+        "path": "../images/cl/汉唐古筝1.jpeg",
+        "videoUrl": "../video/chuangying.mp4",
+        "type": "image",
+        "title": "窗蝇",
+        "description": "古筝细节展示"
+      },
+      {
+        "path": "../images/cl/汉唐古筝1.jpeg",
+        "videoUrl": "../video/moli.mp4",
+        "type": "image",
+        "title": "茉莉",
+        "description": "作品描述文本2"
+      },
+      {
+       "path": "../images/cl/汉唐古筝1.jpeg",
+       "videoUrl": "../video/pengbaban.mp4",
+        "type": "image",
+        "title": "碰八板",
+        "description": "作品描述文本3"
+      },
+      {
+        "path": "../images/cl/汉唐古筝1.jpeg",
+        "videoUrl": "../video/qinqiang.mp4",
+        "type": "image",
+        "title": "秦腔",
+        "description": "作品描述文本4"
+      },
+      {
+        "path": "../images/cl/汉唐古筝2.png",
+        "videoUrl": "../video/qiuwang.mp4",
+        "type": "image",
+        "title": "秋望",
+        "description": "作品描述文本5"
+      },
+      {
+        "path": "../images/cl/汉唐古筝2.png",
+        "videoUrl": "../video/yuezhiguang.mp4",
+        "type": "image",
+        "title": "月之光",
+        "description": "古筝作品展示"
+      },
+      {
+        "path": "../images/cl/汉唐古筝2.png",
+        "videoUrl": "../video/yuzhou.mp4",
+        "type": "image",
+        "title": "渔舟唱晚",
+        "description": "古筝细节展示"
+      }
+    ]
+  }
