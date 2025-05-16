@@ -21,6 +21,12 @@ let galleryConfig = null;
 
 // 初始化函数
 function init() {
+    // 检查Video.js是否已加载
+    if (typeof videojs === 'undefined') {
+        // 动态加载Video.js库
+        loadVideoJS();
+    }
+    
     // 创建加载指示器
     const loader = document.createElement('div');
     loader.className = 'loader';
@@ -78,6 +84,29 @@ function init() {
         // 显示错误信息
         alert('加载画廊时出错，请检查控制台以获取详细信息。');
     });
+}
+
+// 动态加载Video.js库函数
+function loadVideoJS() {
+    console.log('动态加载Video.js库...');
+    
+    // 加载Video.js CSS
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = 'https://vjs.zencdn.net/7.20.3/video-js.css';
+    document.head.appendChild(cssLink);
+    
+    // 加载Video.js脚本
+    const script = document.createElement('script');
+    script.src = 'https://vjs.zencdn.net/7.20.3/video.min.js';
+    script.async = true;
+    script.onload = () => {
+        console.log('Video.js库加载完成');
+    };
+    script.onerror = (error) => {
+        console.error('Video.js库加载失败:', error);
+    };
+    document.head.appendChild(script);
 }
 
 // 加载画廊配置文件
@@ -991,84 +1020,97 @@ function zoomIntoArtwork(frame) {
         }, 10000);
         
     } else if (imageConfig && imageConfig.videoUrl) {
-        console.log('创建视频播放器:', imageConfig.videoUrl);
-        // 创建视频播放器
-        const video = document.createElement('video');
-        video.src = imageConfig.videoUrl;
-        video.style.position = 'fixed';
-        video.style.top = '50%';
-        video.style.left = '50%';
-        video.style.transform = 'translate(-50%, -50%)';
-        video.style.width = '65%';
-        video.style.height = 'auto';
-        video.style.maxHeight = '80vh';
-        video.style.zIndex = '1000';
-        video.style.opacity = '0';
-        video.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.3)';
-        video.style.borderRadius = '4px';
-        video.style.pointerEvents = 'auto'; // 确保视频控件可以点击
+        console.log('使用Video.js创建视频播放器:', imageConfig.videoUrl);
         
-        // 添加以下属性来确保声音正常工作
-        video.controls = true;            // 显示控制栏
-        video.muted = false;              // 确保未静音
-        video.volume = 1.0;               // 设置音量最大
-        video.playsInline = true;         // 支持内联播放
-        video.preload = 'auto';           // 预加载视频
-        video.crossOrigin = 'anonymous';  // 允许跨域资源
+        // 创建Video.js播放器容器
+        const videoContainer = document.createElement('div');
+        videoContainer.style.position = 'fixed';
+        videoContainer.style.top = '50%';
+        videoContainer.style.left = '50%';
+        videoContainer.style.transform = 'translate(-50%, -50%)';
+        videoContainer.style.width = '65%';
+        videoContainer.style.height = 'auto';
+        videoContainer.style.maxHeight = '80vh';
+        videoContainer.style.zIndex = '1000';
+        videoContainer.style.opacity = '0';
+        videoContainer.style.transition = 'opacity 0.5s';
+        videoContainer.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.3)';
+        videoContainer.style.borderRadius = '4px';
+        document.getElementById('gallery-container').appendChild(videoContainer);
         
-        // 给视频添加声音调试信息
-        video.addEventListener('volumechange', () => {
-            console.log('音量变化:', video.volume, '是否静音:', video.muted);
-        });
+        // 创建video元素和唯一ID
+        const videoId = 'video-player-' + Date.now();
+        const videoElement = document.createElement('video');
+        videoElement.id = videoId;
+        videoElement.className = 'video-js vjs-big-play-centered';
+        videoElement.controls = true;
+        videoElement.preload = 'auto';
+        videoElement.width = '100%';
+        videoElement.height = 'auto';
+        videoElement.style.borderRadius = '4px';
         
-        video.addEventListener('canplay', () => {
-            console.log('视频可以播放，音轨数量:', video.audioTracks ? video.audioTracks.length : '不支持audioTracks属性');
-            console.log('视频音量:', video.volume, '是否静音:', video.muted);
-        });
+        // 添加视频源
+        const sourceElement = document.createElement('source');
+        sourceElement.src = imageConfig.videoUrl;
+        sourceElement.type = getVideoMimeType(imageConfig.videoUrl);
+        videoElement.appendChild(sourceElement);
         
-        video.addEventListener('error', (e) => {
-            console.error('视频加载错误:', e);
-        });
+        videoContainer.appendChild(videoElement);
+        currentVideo = videoContainer;
         
-        document.getElementById('gallery-container').appendChild(video);
-        currentVideo = video;
-        
-        // 淡入效果
+        // 初始化Video.js播放器
         setTimeout(() => {
-            video.style.transition = 'opacity 0.5s';
-            video.style.opacity = '1';
+            // 淡入显示
+            videoContainer.style.opacity = '1';
             
-            // 在用户交互后尝试播放
-            const playPromise = video.play();
-            
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    console.log('视频开始播放，音量:', video.volume, '是否静音:', video.muted);
-                }).catch(error => {
-                    console.error('自动播放失败:', error);
-                    // 创建播放提示
-                    const playHint = document.createElement('div');
-                    playHint.style.position = 'fixed';
-                    playHint.style.top = '40%';
-                    playHint.style.left = '50%';
-                    playHint.style.transform = 'translate(-50%, -50%)';
-                    playHint.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-                    playHint.style.color = 'white';
-                    playHint.style.padding = '15px 20px';
-                    playHint.style.borderRadius = '8px';
-                    playHint.style.zIndex = '1002';
-                    playHint.style.cursor = 'pointer';
-                    playHint.innerHTML = '<i class="fas fa-play"></i> 点击播放视频和声音';
-                    document.getElementById('gallery-container').appendChild(playHint);
-                    
-                    // 点击提示播放视频
-                    playHint.addEventListener('click', () => {
-                        video.muted = false;
-                        video.volume = 1.0;
-                        video.play();
-                        document.getElementById('gallery-container').removeChild(playHint);
-                    });
+            // 初始化Video.js
+            if (typeof videojs !== 'undefined') {
+                const player = videojs(videoId, {
+                    controls: true,
+                    autoplay: false,
+                    preload: 'auto',
+                    fluid: true,
+                    playbackRates: [0.5, 1, 1.5, 2],
+                    controlBar: {
+                        volumePanel: {inline: false}
+                    }
                 });
+                
+                // 视频加载完成后触发
+                player.on('loadedmetadata', function() {
+                    console.log('Video.js: 视频元数据加载完成');
+                });
+                
+                // 播放开始时触发
+                player.on('play', function() {
+                    console.log('Video.js: 视频开始播放');
+                });
+                
+                // 音量变化时触发
+                player.on('volumechange', function() {
+                    console.log('Video.js: 音量变化为', player.volume());
+                });
+                
+                // 错误处理
+                player.on('error', function() {
+                    console.error('Video.js: 视频播放错误', player.error());
+                });
+                
+                // 存储player实例以便清理
+                videoContainer.player = player;
+            } else {
+                console.error('Video.js库未加载，请确保在HTML中引入Video.js');
+                // 回退到普通video标签
+                const fallbackVideo = document.createElement('video');
+                fallbackVideo.src = imageConfig.videoUrl;
+                fallbackVideo.controls = true;
+                fallbackVideo.style.width = '100%';
+                fallbackVideo.style.height = 'auto';
+                
+                // 清空容器并添加回退视频
+                videoContainer.innerHTML = '';
+                videoContainer.appendChild(fallbackVideo);
+                fallbackVideo.play().catch(e => console.error('普通播放失败:', e));
             }
         }, 300);
     } else {
@@ -1116,7 +1158,12 @@ function exitZoomMode() {
     // 移除视频或图片
     if (currentVideo) {
         console.log('移除视频或图片元素:', currentVideo.tagName);
-        if (currentVideo.tagName === 'VIDEO') {
+        
+        // 检查是否是Video.js播放器
+        if (currentVideo.player && typeof currentVideo.player.dispose === 'function') {
+            console.log('销毁Video.js播放器');
+            currentVideo.player.dispose();
+        } else if (currentVideo.tagName === 'VIDEO') {
             try {
                 // 确保视频停止播放并释放资源
                 currentVideo.pause();
@@ -1127,6 +1174,7 @@ function exitZoomMode() {
                 console.error('停止视频时出错:', e);
             }
         }
+        
         // 使用淡出效果
         currentVideo.style.opacity = '0';
         setTimeout(() => {
@@ -1214,6 +1262,19 @@ function exitZoomMode() {
     currentIntersectedFrame = null;
     
     console.log('exitZoomMode函数执行完毕');
+}
+
+// 根据文件扩展名获取MIME类型
+function getVideoMimeType(url) {
+    const ext = url.split('.').pop().toLowerCase();
+    const mimeTypes = {
+        'mp4': 'video/mp4',
+        'webm': 'video/webm',
+        'ogg': 'video/ogg',
+        'mov': 'video/quicktime',
+        'm4v': 'video/mp4'
+    };
+    return mimeTypes[ext] || 'video/mp4';
 }
 
 // 检查config目录是否存在函数
